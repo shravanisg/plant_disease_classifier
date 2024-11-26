@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plant-disease-classifier
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: plant-disease-classifier
+  template:
+    metadata:
+      labels:
+        app: plant-disease-classifier
+    spec:
+      containers:
+      - name: plant-disease-classifier
+        image: your-dockerhub-username/plant-disease-classifier:latest
+        ports:
+        - containerPort: 8000
