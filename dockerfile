@@ -31,7 +31,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /plant_disease_classifier
 
 # Copy the dependencies file into the container
 COPY /app/requirements.txt /app/requirements.txt
@@ -40,9 +40,9 @@ COPY /app/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # Copy the project files into the container
-COPY /app/api.py /app/api.py
-COPY /app/plant_disease /app/plant_disease
-COPY /app/class_indices.json /app/class_indices.json
+COPY /api.py /api.py
+COPY /plant_disease /plant_disease
+COPY /class_indices.json /class_indices.json
 
 # Expose the port your app will run on
 EXPOSE 8000
