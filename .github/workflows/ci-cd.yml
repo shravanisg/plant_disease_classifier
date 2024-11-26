@@ -15,11 +15,11 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t shravanighorpade/plant-disease-classifier .
+        docker build -t yuvraj151/plant-disease-classifier .
 
     - name: Push Docker image
       run: |
-        docker push shravanighorpade/plant-disease-classifier
+        docker push yuvraj151/plant-disease-classifier
 
   deploy:
     needs: build
