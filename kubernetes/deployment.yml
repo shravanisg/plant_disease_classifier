@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: plant-disease-classifier
-        image: your-dockerhub-username/plant-disease-classifier:latest
+        image: yuvraj151/plant-disease-classifier:latest
         ports:
         - containerPort: 8000
